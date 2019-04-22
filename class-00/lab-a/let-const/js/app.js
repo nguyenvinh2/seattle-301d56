@@ -30,14 +30,14 @@ function makeRandom() {
 
 function displayPics(){
   while(viewed.length < 6){
-    var rando = makeRandom();
+    let rando = makeRandom();
     while(!viewed.includes(rando)){
       viewed.push(rando);
     }
   }
-  console.log(rando);
+
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the letiable declaration from `let to `let`.
-  // PUT YOUR RESPONSE IN THIS COMMENT
+  // let is blocked scoped. attempting to access rando outside of the for loop does not work.
   console.log(viewed);
 
   for (let i = 0; i < 3; i++){
